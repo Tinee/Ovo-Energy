@@ -4,8 +4,7 @@
   "description": "Rock, Paper, Scissor [Test]",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node_modules/gulp/bin/gulp.js webserver"
+    "start": "concurrently --kill-others 'node_modules/gulp/bin/gulp.js webserver' 'node_modules/gulp/bin/gulp.js watch'"
   },
   "repository": {
     "type": "git",
@@ -17,9 +16,13 @@
     "Jasmine"
   ],
   "devDependencies": {
+    "concurrently": "^3.1.0",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
     "gulp-clean-css": "^2.0.3",
     "gulp-load-plugins": "^1.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
     "gulp-webserver": "^0.9.1"
   },
   "author": "Marcus Tine Carlsson",
