@@ -1,0 +1,22 @@
+{
+  "name": "evoenergy",
+  "description": "Rock, Paper, Scissor [Test]",
+  "main": "",
+  "authors": [
+    "Marcus Tine Carlsson"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Angular",
+    "Gulp",
+    "Jasmine"
+  ],
+  "homepage": "https://github.com/Tinee/Ovo-Energy",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
