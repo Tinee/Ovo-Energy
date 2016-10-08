@@ -6,9 +6,10 @@
     <title>Rock, Paper, Scissor</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="./app/assets/style/prod/site.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
-
 </head>
 
 <body>
@@ -18,15 +19,23 @@
         <!-- Lib  -->
         <script src="./app/vendor/angular/angular.min.js"></script>
         <script src="./app/vendor/angular-resource/angular-resource.min.js"></script>
-        <script src="./app/vendor/angular-ui-router/release/angular-ui-router.min.js"></script> 
+        <script src="./app/vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
 
         <!-- Modules  -->
         <script src="./app/app.js"></script>
         <script src="./app/core/core.module.js"></script>
+        <script src="./app/shell/shell.module.js"></script>
         <script src="./app/game/game.module.js"></script>
-
-          <!-- Controllers  -->
+        <script src="./app/about/about.module.js"></script>
+        
+        <!-- Controllers  -->
         <script src="./app/game/game.js"></script>
+        <script src="./app/shell/navbar/navbar.js"></script>
+        <script src="./app/about/about.js"></script>
+
+        <!-- Config  -->
+        <script src="./app/core/core.config.js"></script>
+
     </body>
 
 </html>
