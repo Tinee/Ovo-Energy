@@ -4,7 +4,12 @@
   "description": "Rock, Paper, Scissor [Test]",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "concurrently --kill-others 'node_modules/gulp/bin/gulp.js webserver' 'node_modules/gulp/bin/gulp.js watch'"
+    "start": "concurrently --kill-others 'npm run gulp:webserver' 'npm run gulp:watch'",
+    "test": "node_modules/karma/bin/karma start",
+    "postinstall": "node_modules/bower/bin/bower install",
+
+    "gulp:webserver": "node_modules/gulp/bin/gulp.js webserver",
+    "gulp:watch": "node_modules/gulp/bin/gulp.js watch"
   },
   "repository": {
     "type": "git",
@@ -13,10 +18,14 @@
   "keywords": [
     "Angular",
     "Gulp",
-    "Jasmine"
+    "Jasmine",
+    "Karma",
+    "Bower",
+    "Ui-Router"
   ],
   "devDependencies": {
     "angular-mocks": "^1.5.8",
+    "bower": "^1.7.9",
     "concurrently": "^3.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
