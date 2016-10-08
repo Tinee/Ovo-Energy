@@ -4,7 +4,9 @@
   angular.module('app', [
     'app.core',
 
-    'app.game'
+    'app.shell',
+    'app.game',
+    'app.about'
   ])
     .config([
       '$stateProvider',
@@ -17,10 +19,20 @@
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
-      .state('home', {
+      .state('shell', {
         url: '/',
+        controller: 'NavbarController as vm',
+        templateUrl: '/app/shell/navbar/navbar.html',
+      })
+      .state('shell.game', {
+        url: 'game',
         templateUrl: '/app/game/game.html',
         controller: 'GameController as vm',
+      })
+      .state('shell.about', {
+        url: 'about',
+        templateUrl: '/app/about/about.html',
+        controller: 'AboutController as vm',
       });
 
     $locationProvider.html5Mode(true);
