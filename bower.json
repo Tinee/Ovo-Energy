@@ -11,6 +11,11 @@
     "Gulp",
     "Jasmine"
   ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "angular-resource": "^1.5.8"
+  },
   "homepage": "https://github.com/Tinee/Ovo-Energy",
   "ignore": [
     "**/.*",
