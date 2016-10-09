@@ -1,13 +1,13 @@
-// Karma configuration
-// Generated on Sat Oct 08 2016 19:33:50 GMT+0100 (BST)
-
 module.exports = function (config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine'],
     files: [
-      './app/vendor/angular/angular.min.js',
+      './app/vendor/angular/angular.js',
       './app/vendor/angular-ui-router/release/angular-ui-router.min.js',
+      './node_modules/angular-mocks/angular-mocks.js',
+      './app/**/*.module.js',
+      './app/**/*.factory.js',
       './app/**/*.spec.js'
     ],
     exclude: [],
@@ -22,3 +22,9 @@ module.exports = function (config) {
     concurrency: Infinity
   })
 }
+//  './node_modules/angular/angular.js',                             // angular
+//     './node_modules/angular-ui-router/release/angular-ui-router.js', // ui-router
+//     './node_modules/angular-mocks/angular-mocks.js',                 // loads our modules for tests
+//     './app/services/users/users.js',                                 // our Users factory
+//     './app/app.js',                                                  // our angular app
+//     './app/services/users/users.spec.js'
