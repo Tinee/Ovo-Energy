@@ -2,11 +2,11 @@
     'use strict';
 
     angular
-        .module('app.factories')
-        .factory('GameFactory', GameFactory);
+        .module('app.services')
+        .factory('GameService', GameService);
 
-    GameFactory.$inject = [];
-    function GameFactory() {
+    GameService.$inject = [];
+    function GameService() {
         var services = {
             getWinner: getWinner
         };

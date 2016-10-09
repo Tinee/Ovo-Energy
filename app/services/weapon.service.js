@@ -2,17 +2,17 @@
     'use strict';
 
     angular
-        .module('app.factories')
-        .factory('WeaponsFactory', WeaponsFactory);
+        .module('app.services')
+        .factory('WeaponService', WeaponService);
 
-    WeaponsFactory.$inject = [];
-    function WeaponsFactory() {
+    WeaponService.$inject = [];
+    function WeaponService() {
         var services = {
             get: get
         };
 
         return services;
-
+        
         ////////////////
         function get() {
             return [
