@@ -31,6 +31,11 @@
         templateUrl: '/app/game/game.html',
         controller: 'GameController as vm',
       })
+      .state('shell.play', {
+        url: 'play',
+        templateUrl: '/app/game/play/play.html',
+        controller: 'PlayController as vm',
+      })
       .state('shell.about', {
         url: 'about',
         templateUrl: '/app/about/about.html',
