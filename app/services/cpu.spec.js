@@ -12,18 +12,18 @@ describe('Cpu Service', function () {
     });
 
     it('should have function called getRandomCpuWeapon', function () {
-        expect(cpuService.getRandomCpuWeapon).toBeDefined();
+        expect(cpuService.getRandomCpuWithWeapon).toBeDefined();
     });
 
     it('should give back 1 random weapon', function () {
-        expect(cpuService.getRandomCpuWeapon(3)).toBeDefined();
+        expect(cpuService.getRandomCpuWithWeapon(3)).toBeDefined();
     });
 
     it('should give back the first weapon', function () {
-        expect(cpuService.getRandomCpuWeapon(1)).toEqual({
+        expect(cpuService.getRandomCpuWithWeapon(1).weapon).toEqual({
             id: 1,
             name: 'Rock',
-            image: './app/assets/images/60 Rock.png',
+            image: './app/assets/images/140 Rock.png',
             beats: 3
         });
     });

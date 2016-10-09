@@ -8,15 +8,20 @@
     CpuService.$inject = ['WeaponService'];
     function CpuService(weaponService) {
         var service = {
-            getRandomCpuWeapon: getRandomCpuWeapon
+            getRandomCpuWithWeapon: getRandomCpuWithWeapon
         };
 
         return service;
 
         ////////////////
-        function getRandomCpuWeapon(manyWeapons) {
-           var randomNumber = Math.floor((Math.random() * manyWeapons));
-           return weaponService.get()[randomNumber];
+        function getRandomCpuWithWeapon(manyWeapons) {
+            var randomNumber = Math.floor((Math.random() * manyWeapons));
+            var weapon = weaponService.get()[randomNumber];
+
+            return {
+                cpu: true,
+                weapon: weapon
+            }
         }
     }
 })();
