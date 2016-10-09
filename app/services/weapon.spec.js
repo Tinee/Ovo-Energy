@@ -1,4 +1,4 @@
-describe('Users factory', function () {
+describe('Weapon Service', function () {
     var weaponService;
 
     beforeEach(angular.mock.module('app.services'));
