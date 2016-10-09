@@ -1,6 +1,5 @@
 //*** General ***//
 
-
 //*** About Section ***//
 
 .about{ 
@@ -27,6 +26,11 @@
         height: 60px;
         line-height: 60px;
         display: flex;
+
+        &:hover {
+           transform: scale(1.1);
+           transition: all .2s ease-in-out; 
+        }
     }
     .button-main {
         border-radius: 50px 0 50px 0;
@@ -38,6 +42,7 @@
         border: 0px transparent;
         font-size: 24px;
         margin: auto;
+        outline:0;
     }
 }
 
