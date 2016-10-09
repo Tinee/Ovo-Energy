@@ -7,6 +7,7 @@ module.exports = function (config) {
       './app/vendor/angular-ui-router/release/angular-ui-router.min.js',
       './node_modules/angular-mocks/angular-mocks.js',
       './app/**/*.module.js',
+      './app/**/*.controller.js',
       './app/**/*.factory.js',
       './app/**/*.spec.js'
     ],
