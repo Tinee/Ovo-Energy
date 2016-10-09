@@ -8,7 +8,7 @@
     'app.game',
     'app.about',
 
-    'app.services'
+    'app.factories'
   ])
     .config([
       '$stateProvider',
