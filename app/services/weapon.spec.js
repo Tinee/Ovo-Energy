@@ -12,7 +12,7 @@ describe('Weapon Service', function () {
     });
 
     it('should have a get function', function () {
-        expect(weaponService.get).toBeDefined();
+    expect(weaponService.get).toBeDefined();
     });
 
     it('should contain more then 0 weapons', function () {
