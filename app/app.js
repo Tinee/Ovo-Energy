@@ -6,7 +6,9 @@
 
     'app.shell',
     'app.game',
-    'app.about'
+    'app.about',
+
+    'app.services'
   ])
     .config([
       '$stateProvider',
