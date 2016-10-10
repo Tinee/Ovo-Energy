@@ -19,8 +19,6 @@
 
         activate();
 
-        ////////////////
-
         function activate() {
             vm.weapons = weaponService.get();
         }

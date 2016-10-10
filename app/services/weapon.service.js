@@ -13,7 +13,6 @@
 
         return services;
         
-        ////////////////
         function get() {
             return [
                 {

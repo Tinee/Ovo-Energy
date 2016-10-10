@@ -13,7 +13,6 @@
 
         return service;
 
-        ////////////////
         function getRandomCpuWithWeapon(manyWeapons) {
             var randomNumber = Math.floor((Math.random() * manyWeapons));
             var weapon = weaponService.get()[randomNumber];

@@ -14,8 +14,6 @@
 
         return services;
 
-        ////////////////
-
         function playRockPaperScissor(players) {
             var p1 = players[0];
             var p2 = players[1];
