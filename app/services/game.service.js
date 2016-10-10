@@ -8,7 +8,8 @@
     GameService.$inject = ['CpuService'];
     function GameService(cpuService) {
         var services = {
-            playRockPaperScissor: playRockPaperScissor
+            playRockPaperScissor: playRockPaperScissor,
+            createPlayerPool: createPlayerPool
         };
 
         return services;
@@ -18,8 +19,19 @@
         function playRockPaperScissor(players) {
             var p1 = players[0];
             var p2 = players[1];
-            
+
             return _getWinnerOfTwoPlayers(p1, p2);
+        }
+
+        function createPlayerPool(playerWeapon) {
+            var cpuWithWeapon = cpuService.getRandomCpuWithWeapon(3);
+            return [
+                {
+                    cpu: false,
+                    weapon: playerWeapon
+                },
+                cpuWithWeapon
+            ]
         }
 
         function _getWinnerOfTwoPlayers(playerOne, playerTwo) {
@@ -27,17 +39,27 @@
             var p2 = playerTwo;
 
             var winningPlayer = {};
+            var losingPlayer = {};
 
             if (p1.weapon.beats === p2.weapon.id) {
                 winningPlayer = p1;
+                losingPlayer = p2;
             } else if (p2.weapon.beats === p1.weapon.id) {
                 winningPlayer = p2;
+                losingPlayer = p1;
             }
             else {
-                // Returns draw.
-                return null;
+                return {
+                    won: p1,
+                    losed: p2,
+                    draw: true
+                };
             }
-            return winningPlayer;
+            return {
+                won: winningPlayer,
+                losed: losingPlayer,
+                draw: false
+            };
         }
     }
 })();
