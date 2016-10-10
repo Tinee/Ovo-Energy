@@ -1,11 +1,29 @@
 <div class="play">
     <div class="container">
-        <div class="row" align="center">
-            <h1>Choise your Weapon</h1>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row" align="center">
+                    <h1 class="instruction">Choise your Weapon</h1>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2 col-xs-offset-1" ng-repeat="weapon in vm.weapons">
+                        <img ng-click="vm.play(weapon)" class="img-responsive" src="{{weapon.image}}">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-xs-4" ng-repeat="weapon in vm.weapons">
-                <img class="img-responsive" src="{{weapon.image}}">
+        <div ng-if="vm.game" class="row result">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h1 class="game-message" align="center">{{vm.gameMessage}}</h1>
+
+                    <div class="col-xs-2 col-xs-offset-4">
+                        <img class="img-responsive" ng-src="{{vm.game.won.weapon.image}}">
+                    </div>
+                    <div class="col-xs-2">
+                        <img class="img-responsive" ng-src="{{vm.game.losed.weapon.image}}">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
