@@ -14,7 +14,7 @@
         activate();
 
         function activate() {
-            vm.lorem = 'cusantium quae facere aspernatur. Error minus iusto ipsam maxime veritatis architecto imtum, incidunt blanditiis sed excepturi';
+            vm.lorem = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet sapiente, deserunt, magni similique nisi nesciunt totam perspiciatis officiis inventore facilis provident dolores, quod quas soluta obcaecati possimus amet neque iusto dolorem aperiam quam sunt. Sunt dolor saepe minus eius sapiente, earum neque, odit eum. Alias quos ipsa deserunt consequatur saepe!';
         }
     }
 })();
