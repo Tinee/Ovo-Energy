@@ -1,5 +1,7 @@
 //*** General ***//
 
+
+
 //*** About Section ***//
 
 .about{ 
@@ -51,4 +53,19 @@
 
 .play{ 
     margin-top: 80px;
+
+    .instruction {
+        font-family: 'Indie Flower', cursive;
+        font-size: 65px;
+    }
+
+    .result{
+        margin: 50px;
+        
+        .game-message {
+          font-family: 'Indie Flower', cursive;
+          font-size: 65px; 
+        }
+    }
+    
 }
