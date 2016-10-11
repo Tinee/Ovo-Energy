@@ -16,6 +16,7 @@
         vm.gameMessage = '';
 
         vm.play = play;
+        vm.checkResult = checkResult;
 
         activate();
 
