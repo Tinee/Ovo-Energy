@@ -14,6 +14,7 @@ var scriptDependencies = [
   // Vendor Scripts
   './app/vendor/angular/angular.min.js',
   './app/vendor/angular-ui-router/release/angular-ui-router.min.js',
+  './app/vendor/angular-resource/angular-resource.min.js',
   // Modules
   './app/app.js',
   './app/**/*.module.js',
