@@ -1,30 +1,31 @@
 <div class="play">
-    <div class="container">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <div class="row" align="center">
-                    <h1 class="instruction">Choise your Weapon</h1>
-                </div>
-                <div class="row">
-                    <div class="col-xs-2 col-xs-offset-1 choise-weapon" ng-repeat="weapon in vm.weapons">
-                        <img ng-click="vm.play(weapon)" class="img-responsive" src="{{weapon.image}}">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div ng-if="vm.game" class="row result">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <h1 class="game-message" align="center">{{vm.gameMessage}}</h1>
-
-                    <div class="col-xs-2 col-xs-offset-4">
-                        <img class="img-responsive" ng-src="{{vm.game.won.weapon.image}}">
-                    </div>
-                    <div class="col-xs-2">
-                        <img class="img-responsive" ng-src="{{vm.game.lost.weapon.image}}">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="row" align="center">
+					<h1 class="instruction hidden-xs">{{vm.choiseWeaponMessage}}</h1>
+					<h4 class="hidden-sm">{{vm.choiseWeaponMessage}}</h4>
+				</div>
+				<div class="row">
+					<div class="col-xs-3 col-xs-offset-1  col- choise-weapon" ng-repeat="weapon in vm.weapons">
+						<img ng-click="vm.play(weapon)" class="img-responsive" src="{{weapon.image}}">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div ng-if="vm.game" class="row result">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<h1 class="game-message hidden-xs" align="center">{{vm.gameMessage}}</h1>
+					<h4 class="hidden-sm" align="center">{{vm.gameMessage}}</h4>
+					<div class="col-xs-5 col-xs-offset-1">
+						<img class="img-responsive" ng-src="{{vm.game.won.weapon.image}}">
+					</div>
+					<div class="col-xs-5">
+						<img class="img-responsive" ng-src="{{vm.game.lost.weapon.image}}">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

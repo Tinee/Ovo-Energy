@@ -14,6 +14,7 @@
         vm.players = [];
         vm.game = null;
         vm.gameMessage = '';
+        vm.choiseWeaponMessage = 'Choise Weapon!';
 
         vm.play = play;
         vm.checkResult = checkResult;
