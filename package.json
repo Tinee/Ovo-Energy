@@ -4,7 +4,7 @@
   "description": "Rock, Paper, Scissor [Test]",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "concurrently --kill-others 'npm run gulp:webserver' 'npm run gulp:watch'",
+    "start": "concurrently --kill-others 'npm run gulp:webserver' 'npm run gulp:watch' 'npm run backend'",
     "test": "node_modules/karma/bin/karma start",
     "backend": "node_modules/json-server/bin/index.js ./api/db.json",
     "postinstall": "node_modules/bower/bin/bower install",
