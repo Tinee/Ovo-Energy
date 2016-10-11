@@ -3,22 +3,25 @@
     {
       "id": 1,
       "name": "Rock",
-      "beats": "3"
+      "beats": "3",
+      "image": "./app/assets/images/140 Rock.png"
     },
     {
       "id": 2,
       "name": "Paper",
-      "beats": "1"
+      "beats": "1",
+      "image": "./app/assets/images/140 Paper.png"
     },
     {
       "id": 3,
       "name": "Scissors",
-      "beats": "2"
+      "beats": "2",
+      "image": "./app/assets/images/140 Scissors.png"
     },
     {
       "id": 4,
       "name": "Darth Wader",
-      "beats": "5"
+      "beats": "6"
     },
     {
       "id": 5,
@@ -28,7 +31,7 @@
     {
       "id": 6,
       "name": "Yoda",
-      "beats": "4"
+      "beats": "5"
     }
   ]
 }
