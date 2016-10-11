@@ -2,43 +2,19 @@
 <html ng-app="app" lang="en">
 
 <head>
-    <base href="/" />
-    <title>Rock, Paper, Scissor</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./app/assets/style/prod/site.css">
-    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
+	<base href="/" />
+	<title>Rock, Paper, Scissor</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./dist/app.css">
+	<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		crossorigin="anonymous">
 </head>
 
 <body ui-view>
 
-    <!-- Lib  -->
-    <script src="./app/vendor/angular/angular.min.js"></script>
-    <script src="./app/vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
-
-    <!-- Modules  -->
-    <script src="./app/app.js"></script>
-    <script src="./app/core/core.module.js"></script>
-    <script src="./app/shell/shell.module.js"></script>
-    <script src="./app/game/game.module.js"></script>
-    <script src="./app/about/about.module.js"></script>
-    <script src="./app/services/services.module.js"></script>
-
-    <!-- Controllers  -->
-    <script src="./app/game/game.controller.js"></script>
-    <script src="./app/shell/navbar/navbar.controller.js"></script>
-    <script src="./app/about/about.controller.js"></script>
-    <script src="./app/game/play/play.controller.js"></script>
-
-    <!-- Services  -->
-    <script src="./app/services/weapon.service.js"></script>
-    <script src="./app/services/cpu.service.js"></script>
-    <script src="./app/services/game.service.js"></script>
-
-    <!-- Config  -->
-    <script src="./app/core/core.config.js"></script>
+	<script src="./dist/bundle.js"></script>
 </body>
 
 </html>
