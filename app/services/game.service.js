@@ -49,13 +49,13 @@
             else {
                 return {
                     won: p1,
-                    losed: p2,
+                    lost: p2,
                     draw: true
                 };
             }
             return {
                 won: winningPlayer,
-                losed: losingPlayer,
+                lost: losingPlayer,
                 draw: false
             };
         }
