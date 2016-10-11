@@ -5,8 +5,8 @@
     .module('app.game')
     .controller('GameController', GameController);
 
-  GameController.$inject = ['$location'];
-  function GameController($location) {
+  GameController.$inject = ['$state'];
+  function GameController($state) {
     var vm = this;
 
     vm.play = play;
@@ -17,7 +17,7 @@
     }
 
     function play(){
-      $location.path('play');
+      $state.go('shell.play');
     }
   }
 })();
