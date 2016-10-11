@@ -1,5 +1,34 @@
 {
   "weapons": [
-    { "id": 1, "name": "Darth Wader", "beats": "2" }
+    {
+      "id": 1,
+      "name": "Rock",
+      "beats": "3"
+    },
+    {
+      "id": 2,
+      "name": "Paper",
+      "beats": "1"
+    },
+    {
+      "id": 3,
+      "name": "Scissors",
+      "beats": "2"
+    },
+    {
+      "id": 4,
+      "name": "Darth Wader",
+      "beats": "5"
+    },
+    {
+      "id": 5,
+      "name": "Obi Wan",
+      "beats": "4"
+    },
+    {
+      "id": 6,
+      "name": "Yoda",
+      "beats": "4"
+    }
   ]
 }
