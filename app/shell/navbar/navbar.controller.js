@@ -1,20 +1,22 @@
 (function () {
-    'use strict';
+  'use strict';
 
-    angular
-        .module('app.shell')
-        .controller('NavbarController', NavbarController);
+  angular
+    .module('app.shell')
+    .controller('NavbarController', NavbarController);
 
-    NavbarController.$inject = [];
-    function NavbarController() {
-        var vm = this;
+  NavbarController.$inject = ['NavbarService'];
+  function NavbarController(navbarService) {
+    var vm = this;
 
-        vm.brand = '';
+    vm.brand = '';
+    vm.menuItems = [];
 
-        activate();
+    activate();
 
-        function activate() {
-            vm.brand = 'Evo-Energy'
-        }
+    function activate() {
+      vm.brand = 'Evo-Energy'
+      vm.menuItems = navbarService.getItems()
     }
+  }
 })();

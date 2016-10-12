@@ -10,9 +10,8 @@
       <a href="https://www.ovoenergy.com/home" target="_blank" class="navbar-brand company-brand">{{vm.brand}}</a>
     </div>
     <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a ui-sref="shell.game">Game</a></li>
-        <li><a ui-sref="shell.about">About</a></li>
+      <ul ng-repeat="item in vm.menuItems" class="nav navbar-nav navbar-right">
+        <li><a ui-sref="{{item.href}}">{{item.name}}</a></li>
       </ul>
     </div>
   </div>
