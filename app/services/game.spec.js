@@ -5,6 +5,7 @@ describe('Game Service', function () {
     var paper;
     var scissor;
 
+
     beforeEach(angular.mock.module('app.services'));
 
     beforeEach(inject(function (GameService, CpuService) {
@@ -81,7 +82,7 @@ describe('Game Service', function () {
     });
 
      it('Should return a array of player including a bot when I send in a real player.', function () {
-        
+
         expect(gameService.createPlayerPool(paper).length).toBeGreaterThan(0);
     });
 

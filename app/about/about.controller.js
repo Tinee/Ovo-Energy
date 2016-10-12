@@ -11,6 +11,7 @@
 
         vm.lorems = '';
 
+
         activate();
 
         function activate() {

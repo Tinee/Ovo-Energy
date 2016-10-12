@@ -4,12 +4,14 @@
   "description": "Rock, Paper, Scissor [Test]",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "concurrently --kill-others 'npm run gulp:webserver' 'npm run gulp:watch' 'npm run backend'",
+    "start": "concurrently --kill-others 'npm run gulp:webserver'  'npm run gulp:watch' 'npm run backend'",
     "test": "node_modules/karma/bin/karma start",
     "backend": "node_modules/json-server/bin/index.js ./api/db.json",
     "postinstall": "node_modules/bower/bin/bower install",
     "gulp:webserver": "node_modules/gulp/bin/gulp.js webserver",
-    "gulp:watch": "node_modules/gulp/bin/gulp.js watch"
+    "gulp:watch": "node_modules/gulp/bin/gulp.js watch",
+    "gulp:build-js": "node_modules/gulp/bin/gulp.js build-js",
+    "gulp:build-css": "node_modules/gulp/bin/gulp.js build-css"
   },
   "repository": {
     "type": "git",
