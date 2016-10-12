@@ -10,13 +10,15 @@
     var vm = this;
 
     vm.play = play;
+    vm.btnText = '';
 
     activate();
 
     function activate() {
+      vm.btnText = 'play';
     }
 
-    function play(){
+    function play() {
       $state.go('shell.play');
     }
   }
