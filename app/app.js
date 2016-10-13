@@ -4,6 +4,7 @@
   angular.module('app', [
     'app.core',
 
+    'app.directives',
     'app.shell',
     'app.game',
     'app.about',

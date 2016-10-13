@@ -9,7 +9,8 @@
     function GameService(cpuService) {
         var services = {
             playRockPaperScissor: playRockPaperScissor,
-            createPlayerPool: createPlayerPool
+            createPlayerPool: createPlayerPool,
+            pushGameInHistory: pushGameInHistory,
         };
 
         return services;
@@ -19,6 +20,12 @@
             var p2 = players[1];
 
             return _getWinnerOfTwoPlayers(p1, p2);
+        }
+
+        function pushGameInHistory(game, history){
+            history.push(game);
+
+            return history;
         }
 
         function createPlayerPool(playerWeapon) {

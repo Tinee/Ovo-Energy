@@ -14,6 +14,7 @@
 
     activate();
 
+
     function activate() {
       vm.brand = 'Evo-Energy'
       vm.menuItems = navbarService.getItems()

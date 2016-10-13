@@ -17,6 +17,8 @@ var scriptDependencies = [
   // Modules
   './app/app.js',
   './app/**/*.module.js',
+  // Directive
+  './app/**/*.directives.js',
   // Controllers
   './app/**/*.controller.js',
   // Services

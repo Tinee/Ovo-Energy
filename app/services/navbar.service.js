@@ -13,17 +13,16 @@
 
     return service;
 
-    ////////////////
     function getItems() {
       return [
-        {
-          name: 'About',
-          href: 'shell.about'
-        },
         {
           name: 'Game',
           href: 'shell.game'
         },
+        {
+          name: 'About',
+          href: 'shell.about'
+        }
       ]
     }
   }

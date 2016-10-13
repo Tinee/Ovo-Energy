@@ -101,7 +101,6 @@ describe('PlayController', function () {
   it('Play should generate a show a winner and call checkResult()', function () {
     var controller = createController();
 
-
     expect(controller.play()).toBeDefined;
     expect(controller.gameMessage).toEqual('You Won with Paper');
   });

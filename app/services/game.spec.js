@@ -1,90 +1,107 @@
 describe('Game Service', function () {
-    var gameService;
-    var dummyPlayers;
-    var rock;
-    var paper;
-    var scissor;
+  var gameService;
+  var dummyPlayers;
+  var rock;
+  var paper;
+  var scissor;
 
 
-    beforeEach(angular.mock.module('app.services'));
+  beforeEach(angular.mock.module('app.services'));
 
-    beforeEach(inject(function (GameService, CpuService) {
-        gameService = GameService;
-    }));
+  beforeEach(inject(function (GameService, CpuService) {
+    gameService = GameService;
+  }));
 
-    beforeEach(function () {
-        rock = {
-            cpu: true,
-            weapon: {
-                id: 1,
-                name: 'Rock',
-                beats: 3
-            }
-        }
+  beforeEach(function () {
+    rock = {
+      cpu: true,
+      weapon: {
+        id: 1,
+        name: 'Rock',
+        beats: 3
+      }
+    }
 
-        paper = {
-            cpu: false,
-            weapon: {
-                id: 2,
-                name: 'Paper',
-                beats: 1
-            }
-        }
+    paper = {
+      cpu: false,
+      weapon: {
+        id: 2,
+        name: 'Paper',
+        beats: 1
+      }
+    }
 
-        scissor = {
-            cpu: false,
-            weapon: {
-                id: 3,
-                name: 'Scissor',
-                beats: 2
-            }
-        }
-    });
+    scissor = {
+      cpu: false,
+      weapon: {
+        id: 3,
+        name: 'Scissor',
+        beats: 2
+      }
+    }
+  });
 
-    it('service should be defined', function () {
-        expect(gameService).toBeDefined();
-    });
+  it('service should be defined', function () {
+    expect(gameService).toBeDefined();
+  });
 
-    it('should have a function called playRockPaperScissor', function () {
-        expect(gameService.playRockPaperScissor).toBeDefined();
-    });
+  it('should have a function called playRockPaperScissor', function () {
+    expect(gameService.playRockPaperScissor).toBeDefined();
+  });
 
-    it('should return rock as the winner when it plays against scissor', function () {
-        var players = [];
-        players.push(rock);
-        players.push(scissor);
+  it('should return rock as the winner when it plays against scissor', function () {
+    var players = [];
+    players.push(rock);
+    players.push(scissor);
 
-        expect(gameService.playRockPaperScissor(players).won).toEqual(players[0])
-    });
+    expect(gameService.playRockPaperScissor(players).won).toEqual(players[0])
+  });
 
-    it('should return scissor as the winner when it plays against paper', function () {
-        var players = [];
-        players.push(scissor);
-        players.push(paper);
+  it('should return scissor as the winner when it plays against paper', function () {
+    var players = [];
+    players.push(scissor);
+    players.push(paper);
 
-        expect(gameService.playRockPaperScissor(players).won).toEqual(players[0])
-    });
+    expect(gameService.playRockPaperScissor(players).won).toEqual(players[0])
+  });
 
-    it('should return paper as the winner when it plays against rock', function () {
-        var players = [];
-        players.push(paper);
-        players.push(rock);
+  it('should return paper as the winner when it plays against rock', function () {
+    var players = [];
+    players.push(paper);
+    players.push(rock);
 
-        expect(gameService.playRockPaperScissor(players).won).toEqual(players[0])
-    });
+    expect(gameService.playRockPaperScissor(players).won).toEqual(players[0])
+  });
 
-    it('Should return null which means draw', function () {
-        var players = [];
-        players.push(rock);
-        players.push(rock);
+  it('Should return null which means draw', function () {
+    var players = [];
+    players.push(rock);
+    players.push(rock);
 
-        expect(gameService.playRockPaperScissor(players).draw).toEqual(true)
-    });
+    expect(gameService.playRockPaperScissor(players).draw).toEqual(true)
+  });
 
-     it('Should return a array of player including a bot when I send in a real player.', function () {
+  it('Should return a array of player including a bot when I send in a real player.', function () {
 
-        expect(gameService.createPlayerPool(paper).length).toBeGreaterThan(0);
-    });
+    expect(gameService.createPlayerPool(paper).length).toBeGreaterThan(0);
+  });
 
+  it('should push in game into an history array and return the array. ', function () {
+    var mockGame = {
+      won: {
+        cpu: false,
+        weapon: rock,
+      },
+      lost: {
+        cpu: true,
+        weapon: scissor,
+      },
+      draw: false
+    };
 
+    var history = [];
+
+    expect(gameService.pushGameInHistory(mockGame, history)).toContain(mockGame);
+
+  });
 })
